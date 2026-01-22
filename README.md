@@ -71,7 +71,7 @@ Como Executar
 Clone este repositório:
 
 Bash
-git clone https://github.com/SEU_USUARIO/SEU_REPO.git
+git clone https://github.com/igorleorocha/copsoq_indicadores.git
 
 Instale as dependências:
 
