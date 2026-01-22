@@ -53,7 +53,7 @@ Estrutura de Arquivos
 
 analise_validacao_copsoq.ipynb: Notebook do Google Colab com o código completo.
 
-base_simulada_500_respostas.csv: O "Toy Dataset" gerado para o teste.
+brespostas.csv: O "Toy Dataset" gerado para o teste.
 
 matriz_teorica_geradora.csv: Matriz de correlação teórica utilizada na simulação.
 
