@@ -51,13 +51,18 @@ factor-analyzer: 0.5.0
 
 Estrutura de Arquivos
 
-analise_validacao_copsoq.ipynb: Notebook do Google Colab com o código completo.
+analise_validacao_copsoq.ipynb: Código-fonte completo em Python (Jupyter Notebook/Google Colab). Contém todas as etapas de simulação, análise de fatores principais (PAF) com rotação Promax e cálculos de consistência interna.
 
-brespostas.csv: O "Toy Dataset" gerado para o teste.
+base_simulada_500_respostas.csv: Contém 500 observações (linhas) e 41 colunas representando os itens do COPSOQ. Os dados seguem uma escala Likert de 1 a 5, gerados via simulação de Monte Carlo com a semente fixa (Seed 42).
 
-matriz_teorica_geradora.csv: Matriz de correlação teórica utilizada na simulação.
+cargas_fatoriais_promax.csv: Matriz de configuração (Pattern Matrix) que apresenta a carga de cada item do COPSOQ em seu respectivo indicador. Utilizada para confirmar a validade convergente e discriminante da estrutura proposta.
 
-mapeamento_itens_indicadores.csv: Arquivo de referência que associa as perguntas do COPSOQ aos indicadores.
+mapeamento_itens_indicadores.csv: Este arquivo atua como o dicionário de dados de referência do projeto. Ele correlaciona os itens do instrumento original COPSOQ-BR aos três indicadores propostos neste estudo (ISP, IAT e NSP).
+
+matriz_correlacao_fatores.csv: Matriz de correlação interfatorial resultante da rotação oblíqua (Promax). Este arquivo apresenta os coeficientes de correlação entre os indicadores ISP, IAT e NSP, demonstrando a interdependência teórica e estatística dos construtos.
+
+matriz_teorica_geradora.csv: Este arquivo contém a matriz de covariância/correlação definida a priori para a simulação de Monte Carlo. Ela detalha as correlações teóricas impostas entre os fatores latentes (ISP, IAT e NSP) antes da adição de ruído e erro de medição. 
+mapeamento_itens_indicadores.csv: Dicionário de referência que correlaciona o número da questão no instrumento COPSOQ, o texto da pergunta e o indicador (ISP, IAT ou NSP) ao qual ela foi atribuída.
 
 requirements.txt: Lista de dependências para instalação.
 
