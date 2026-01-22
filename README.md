@@ -3,6 +3,7 @@ Validação Estrutural de Indicadores Psicossociais (ISP, IAT e NSP) via COPSOQ
 Este repositório contém o código-fonte, dados simulados e especificações metodológicas para a validação da estrutura fatorial dos indicadores propostos no artigo: "Monitoramento de riscos psicossociais no trabalho: proposta de indicadores integrados a partir do COPSOQ versão portuguesa".
 
 Informações do Repositório
+
 Versão: v1.0.0 (Submission Release)
 Data: Janeiro de 2026
 Licença: MIT License
