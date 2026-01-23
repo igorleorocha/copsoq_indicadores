@@ -1,6 +1,6 @@
 
     PROJETO: Monitoramento de Riscos Psicossociais (Indicadores Integrados)
-    DATA DE GERAÇÃO: 2024
+    DATA DE GERAÇÃO: 2025
     METODOLOGIA: Simulação de Monte Carlo
     ESTRUTURA: 41 Itens (COPSOQ-PT Versão Curta)
     PARAMETROS:
