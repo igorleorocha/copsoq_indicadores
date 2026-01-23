@@ -8,7 +8,7 @@ O objetivo deste projeto é propor uma simplificação das dimensões multidimen
 
 - Índice de Sobrecarga Psicológica (ISP): Mede demandas quantitativas, cognitivas e emocionais.
 
--Índice de Apoio no Trabalho (IAT): Mede suporte social, liderança e justiça organizacional.
+- Índice de Apoio no Trabalho (IAT): Mede suporte social, liderança e justiça organizacional.
 
 - Nível de Satisfação Psicológica (NSP): Mede autonomia, significado do trabalho e engajamento.
 
