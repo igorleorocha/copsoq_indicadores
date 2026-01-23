@@ -1,85 +1,53 @@
-# copsoq_indicadores
-Validação Estrutural de Indicadores Psicossociais (ISP, IAT e NSP) via COPSOQ
+Framework de Indicadores de Riscos Psicossociais (COPSOQ-PT)
 
-Este repositório contém o código-fonte, dados simulados e especificações metodológicas para a validação da estrutura fatorial dos indicadores propostos no artigo: "Monitoramento de riscos psicossociais no trabalho: proposta de indicadores integrados a partir do COPSOQ versão portuguesa".
+Este repositório contém os materiais, scripts e conjuntos de dados sintéticos referentes ao estudo metodológico de validação exploratória de indicadores psicossociais baseados na versão curta do Copenhagen Psychosocial Questionnaire (COPSOQ-PT).
 
-Informações do Repositório
+Sobre o Projeto
 
-Versão: v1.0.0 (Submission Release)
+O objetivo deste projeto é propor uma simplificação das dimensões multidimensionais do COPSOQ-PT em três indicadores sintéticos para fins de gestão de Saúde e Segurança do Trabalho (SST) e conformidade com a NR-1 e o eSocial:
 
-Data: Janeiro de 2026
+- Índice de Sobrecarga Psicológica (ISP): Mede demandas quantitativas, cognitivas e emocionais.
 
-Licença: MIT License
+-Índice de Apoio no Trabalho (IAT): Mede suporte social, liderança e justiça organizacional.
 
-Idioma Principal: Português (Brasil)
+- Nível de Satisfação Psicológica (NSP): Mede autonomia, significado do trabalho e engajamento.
 
-Objetivo
+Metodologia e Simulação
 
-Este projeto realiza uma Prova de Conceito (PoC) para validar a coerência estrutural dos indicadores:
+Visto que este é um estudo exploratório preliminar, os dados foram gerados via Simulação de Monte Carlo (N=500), garantindo um ambiente controlado para o teste de estresse da plausibilidade estrutural do modelo.
 
-ISP (Índice de Sobrecarga Psicológica)
+Parâmetros da Simulação
 
-IAT (Índice de Apoio no Trabalho)
+Tamanho da Amostra: 500 observações.
 
-NSP (Nível de Satisfação Psicológica)
+Estrutura: 41 itens (conforme COPSOQ-PT versão curta).
 
-A validação foi conduzida através de simulação computacional de dados (Monte Carlo) para testar a robustez estatística do modelo antes da aplicação empírica em larga escala.
+Semente Aleatória: 42 (para reprodutibilidade).
 
-Especificações Técnicas e Reprodutibilidade
+Linguagem: Python 3.12.
 
-Para garantir a reprodutibilidade total dos resultados apresentados no artigo, foram utilizados os seguintes parâmetros:
+Estrutura do Repositório
 
-Semente Aleatória (Seed): 42
+analise_fatorial_final.py: Script Python utilizado para simulação de dados e análise estatística.
 
-Tamanho da Amostra Simulada: N = 500
+dataset_simulado_41_itens.csv: Base de dados sintética bruta (respostas de 1 a 5).
 
-Método de Extração: Fatores Principais (Principal Axis Factoring - PAF)
+dataset_com_indices_calculados.csv: Base de dados acrescida das colunas ISP, IAT e NSP (médias simples).
 
-Rotação: Varimax (Ortogonal)
+matriz_mapeamento_copsoq.md: Documento detalhando a relação entre os itens do questionário, os macro-fatores e os índices.
 
-Linguagem: Python 3.12+
+Como Reproduzir
 
-Bibliotecas e Versões
+Clone este repositório: git clone https://github.com/igorleorocha/copsoq_indicadores.git
 
-As versões exatas das bibliotecas utilizadas estão listadas no arquivo requirements.txt.
+Instale as dependências necessárias: pip install factor_analyzer pandas numpy scipy
 
-pandas: 2.2.0
+Execute o script analise_fatorial_final.py no seu ambiente Python ou diretamente no Google Colab.
 
-numpy: 1.26.0
+Aspectos Éticos e Limitações
 
-factor-analyzer: 0.5.0
+Este estudo utiliza dados sintéticos. Não houve coleta de dados com seres humanos. Esta pesquisa constitui um primeiro passo exploratório e seus resultados sugerem uma base conceitual promissora, requerendo validação empírica futura em contextos organizacionais reais para a definição de pontos de corte e nexos causais.
 
-Estrutura de Arquivos
+Licença
 
-analise_validacao_copsoq.ipynb: Código-fonte completo em Python (Jupyter Notebook/Google Colab). Contém todas as etapas de simulação, análise de fatores principais (PAF) com rotação Promax e cálculos de consistência interna.
-
-base_simulada_500_respostas.csv: Contém 500 observações (linhas) e 41 colunas representando os itens do COPSOQ. Os dados seguem uma escala Likert de 1 a 5, gerados via simulação de Monte Carlo com a semente fixa (Seed 42).
-
-cargas_fatoriais_promax.csv: Matriz de configuração (Pattern Matrix) que apresenta a carga de cada item do COPSOQ em seu respectivo indicador. Utilizada para confirmar a validade convergente e discriminante da estrutura proposta.
-
-mapeamento_itens_indicadores.csv: Este arquivo atua como o dicionário de dados de referência do projeto. Ele correlaciona os itens do instrumento original COPSOQ-BR aos três indicadores propostos neste estudo (ISP, IAT e NSP).
-
-matriz_correlacao_fatores.csv: Matriz de correlação interfatorial resultante da rotação oblíqua (Promax). Este arquivo apresenta os coeficientes de correlação entre os indicadores ISP, IAT e NSP, demonstrando a interdependência teórica e estatística dos construtos.
-
-matriz_teorica_geradora.csv: Este arquivo contém a matriz de covariância/correlação definida a priori para a simulação de Monte Carlo. Ela detalha as correlações teóricas impostas entre os fatores latentes (ISP, IAT e NSP) antes da adição de ruído e erro de medição. 
-mapeamento_itens_indicadores.csv: Dicionário de referência que correlaciona o número da questão no instrumento COPSOQ, o texto da pergunta e o indicador (ISP, IAT ou NSP) ao qual ela foi atribuída.
-
-requirements.txt: Lista de dependências para instalação.
-
-Como Executar
-
-Clone este repositório:
-
-Bash
-git clone https://github.com/igorleorocha/copsoq_indicadores.git
-
-Instale as dependências:
-
-Bash
-pip install -r requirements.txt
-
-Execute o notebook no ambiente de sua preferência (Jupyter ou Google Colab).
-
-Citação
-Se você utilizar este modelo ou código em sua pesquisa, por favor, cite:
-[Igor Leo Rocha / IFBA]. (2026). Validação de Indicadores Psicossociais via Simulação. GitHub: https://www.youtube.com/watch?v=BW1w0P1KNk0.
+Este projeto está licenciado sob a licença MIT.Contribuições e Contato:Sinta-se à vontade para abrir uma Issue ou enviar um Pull Request para melhorias metodológicas.
