@@ -1,0 +1,11 @@
+
+    PROJETO: Monitoramento de Riscos Psicossociais (Indicadores Integrados)
+    DATA DE GERAÇÃO: 2024
+    METODOLOGIA: Simulação de Monte Carlo
+    ESTRUTURA: 41 Itens (COPSOQ-PT Versão Curta)
+    PARAMETROS:
+    - Tamanho da Amostra (N): 500
+    - Semente Aleatória (Seed): 42
+    - Escala: Likert 1-5 (Discretizada)
+    - Índices Calculados: ISP (Sobrecarga), IAT (Apoio), NSP (Satisfação)
+    
